@@ -13,7 +13,7 @@ public class Account {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy =  "org.hibernate.id.UUIDGenerator")
-    private String id;
+    private String id = "";
     private BigDecimal balance;
     private LocalDateTime creationDate;
 
@@ -30,6 +30,13 @@ public class Account {
         this.creationDate = creationDate;
         this.customer = customer;
         this.transaction = transaction;
+    }
+
+    public Account( BigDecimal balance, LocalDateTime creationDate, Customer customer) {
+        this.balance = balance;
+        this.creationDate = creationDate;
+        this.customer = customer;
+
     }
 
     public String getId() {

@@ -33,6 +33,16 @@ public class Transaction {
         this.account = account;
     }
 
+    public Transaction (TransactionType transactionType, BigDecimal amount, LocalDateTime transactionTime, Account account) {
+
+        this.transactionType = transactionType;
+        this.amount = amount;
+        this.transactionTime = transactionTime;
+        this.account = account;
+    }
+
+
+
     public String getId() {
         return id;
     }
